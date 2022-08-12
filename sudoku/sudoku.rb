@@ -115,13 +115,13 @@ class Sudoku
   
   def to_s
     return ["incorrect input format"] unless input_valid?(@input)
-    convert(@string_arr)
+    puts convert(@string_arr)
   end
   
   def solve
     return ["can\'t be solved"] unless input_valid?(@input) 
     return ["can\'t be solved"] unless !input_with_errors?(@board) 
 
-    convert(@board.flatten) if solvable?(@board)
+    puts convert(@board.flatten) if solvable?(@board)
   end
 end
